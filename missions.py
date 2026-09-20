@@ -31,3 +31,10 @@ def show_missions(missions):
         print(f"Год запуска: {mission['year']}")
         print(f"Направление: {mission['direction']}")
         print()
+
+def find_missions_by_direction(direction):
+    found = []
+    for mission in  MISSIONS:
+        if mission["direction"].lower() == direction.lower():
+            found.append(mission)
+    return found
